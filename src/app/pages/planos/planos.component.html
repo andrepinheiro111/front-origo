@@ -1,0 +1,13 @@
+<table class="table tabela-clientes">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Mensalidade</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let plano of planos">
+      <td>{{ plano.nome }}</td>
+      <td>{{ plano.mensalidade | currency: 'BRL'}}</td>
+    </tr>
+  </tbody>
+</table>

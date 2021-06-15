@@ -1,0 +1,13 @@
+<div class="clientes-box">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" (click)="selecionarMenu(1)">Todos os Clientes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="getCliente(null)">Cadastrar Cliente</a>
+    </li>
+  </ul>
+
+  <app-listar-clientes (listarEmitter)="getCliente($event)" *ngIf="selected === 1"></app-listar-clientes>
+  <app-cadastrar-clientes [cliente]="cliente" *ngIf="selected === 2"></app-cadastrar-clientes>
+</div>

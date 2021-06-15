@@ -1,0 +1,28 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input class="form-control" id="nome" formControlName="nome" placeholder="Digite o nome do cliente">
+  </div>
+  <div class="form-group">
+    <label for="email">E-mail</label>
+    <input type="email" class="form-control" id="email" formControlName="email" placeholder="Digite o email do cliente">
+  </div>
+  <div class="form-group">
+    <label for="telefone">Telefone</label>
+    <input class="form-control" id="telefone" formControlName="telefone" placeholder="Digite o telefone do cliente">
+  </div>
+  <div class="form-group">
+    <label for="estado">Estado</label>
+    <input class="form-control" id="estado" formControlName="estado" placeholder="Digite o estado do cliente">
+  </div>
+  <div class="form-group">
+    <label for="cidade">Cidade</label>
+    <input class="form-control" id="cidade" formControlName="cidade" placeholder="Digite o cidade do cliente">
+  </div>
+  <div class="form-group">
+    <label for="nascimento">Data de nascimento</label>
+    <input type="date" class="form-control" id="nascimento" formControlName="nascimento" placeholder="Selecione a data de nascimento do cliente">
+  </div>
+
+  <button class="btn btn-primary" (click)="submit()" [disabled]="form.invalid">{{ !!cliente ? 'Editar' : 'Cadastrar'}}</button>
+</form>
